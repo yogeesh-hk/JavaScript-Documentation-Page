@@ -3,75 +3,81 @@ html, body {
       font-family: 'Open Sans', Arial, sans-serif;
       line-height: 1.5;
       min-width: 290px;
-}
-  body {
+  }
+body {
     display: flex;
     flex-direction: row;
 }
-.navigation{
+#navbar{
     float: left;
-    width: 15%;
     position:fixed;
+    width: 18%;
 }
- a:link {
+a:link {
       color:black;
   }
- a:visited {
+a:visited {
       color:black;
   }
- ul a:hover {
+ul a:hover {
       background-color: grey;
       color: white;
   }
- ul a:active {
+ul a:active {
       background-color: green;
       color:white;
   }
-  nav ul {
+nav ul {
     border: 1px solid #555;
-    list-style: none;
-    padding-inline-start:10px;
-    padding-inline-end: 10px;
     height: 600px;
+    list-style: none;
     overflow-y: scroll;
-  }
-  
-  nav li {
-    text-align: center;
+    padding-inline-end: 10px;
+    padding-inline-start:10px;
+}
+nav li {
     padding: 2px;
-  }
-  nav a{
+    text-align: center;
+}
+nav a{
       text-decoration: none;
   }
-  .content{
-      margin-left:20% ;
+.content{
       float: right;
+      margin-left:20% ;
   }
-  @media only screen and (max-width: 815px){
-    body{
+@media only screen and (max-width: 815px){
+  body{
         display: flex;
         flex-direction: column;
     } 
-    .navigation{
-        float: none;
+  #navbar{
         background-color: white;
+        border-bottom: 2px solid;
+        float: none;
+        margin-bottom: 0;
+        max-height: 275px;
+        overflow:hidden;
+        padding-bottom: 0;
         position: absolute;
         top: 0;
-        padding-bottom: 0;
-        margin-bottom: 0;
         width: 95%;
-        max-height: 275px;
         z-index: 1;
-        border-bottom: 2px solid;
+    } 
+    #main-header{
+        text-align: center;
+    }
+    nav ul{
+        height: 200px;
         overflow-y: scroll;
-        } 
-        .content{
-            margin-top:275px ;
+    }
+      .content{
+            margin-bottom: 50px;
             margin-left: 10px;
             margin-right: 10px;
-            margin-bottom: 50px;
+            margin-top:275px ;
         }
-  }
+}
 code{
       background-color: #f7f7f7;
       border-radius: 5px;
